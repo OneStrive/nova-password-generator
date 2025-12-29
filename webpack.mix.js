@@ -9,7 +9,11 @@ mix.setPublicPath( 'dist' )
        extractVueStyles: true,
        version: 3
    } )
-   .sass( 'resources/scss/field.scss', 'css' )
+   .sass( 'resources/scss/field.scss', 'css', {
+       sassOptions: {
+           api: 'modern-compiler'
+       }
+   } )
    .nova( 'out-of-office/password-generator' );
 
 mix.options( {
